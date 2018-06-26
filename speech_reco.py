@@ -1,56 +1,72 @@
 import wolframalpha as wf
 import wikipedia as wiki
-import pyttsx3
+import pyttsx3,os
 import speech_recognition as sr
-import os
+from nltk.corpus import wordnet
 import winnavi as f1
+from win_settings import setting
 from pywinauto.keyboard import SendKeys
-from oxforddict import wordsearch
 from chromemode import chmode
 from calculator import calculate
+from motion_detector import motion
 
 
 
 r = sr.Recognizer()
-client = wf.Client('APP_KEY')
+client = wf.Client('V7TGPA-EE3XH495AR')
 en = pyttsx3.init()
 en.setProperty(
     'voice', 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\TTS_MS_EN-US_ZIRA_11.0')
 en.setProperty('rate', 130)
 
 flag = True
+
 while(flag):
     try:
         while(1):
-            """with sr.Microphone() as source:
-                r.adjust_for_ambient_noise(source,duration=3)      #listening input
+            
+            with sr.Microphone() as source:
+
+                r.adjust_for_ambient_noise(source,duration=3)
+
                 print('How can I help you!\n ')
                 audio = r.listen(source)
 
 
             que = r.recognize_google(audio)
-"""
-            que = input('-> ')
+
+            #que = input('-> ')
             print(que)
             que = que.lower()
             que = que.split(' ')
 
 
-            if(' '.join(que)=='go to sleep' or ' '.join(que)=='bye bye'):   #exit program
+            if(' '.join(que)=='go to sleep' or ' '.join(que)=='bye bye' or ' '.join(que)=='quit'):   #exit program
                 flag = False
-                en.say('bye,see you later!')
-                en.runAndWait()
+                
                 break
 
 
             elif(que[0] == 'meaning' or que[0]=='mean'):                    #search meaning and open oxford api
-                re = wordsearch(' '.join(que[1:]))
+                re = wordnet.synsets(''.join(que[1:]))
+                re = re[0].definition()
+                print('in dic ',re)
+                \
                 en.say(' '.join(que[1:]) + 'is ' + re)
                 en.runAndWait()
+
+            elif(' '.join(que) == 'start motion detector'):
+                en.say('starting motion detector in 3 seconds')
+                en.runAndWait()
+                motion()
 
 
             elif(que[0]=='calculate'):      #calculation call
                 ans = calculate(' '.join(que[1:]))
+
+
+            elif(que[0]=='press' or que[0]=='command'):
+                setting(' '.join(que[1:]))
 
 
             elif(' '.join(que)=='shutdown' or ' '.join(que)=='shutdown computer'):
@@ -63,7 +79,7 @@ while(flag):
                     naudio = r1.listen(source)
                 com = r1.recognize_google(naudio).lower()
                 if(com=='yes'):
-                    os.system('psshutdown')
+                    os.system('shutdown')
                 else:
                     en.say('as you wish')
 
