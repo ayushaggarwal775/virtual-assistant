@@ -8,6 +8,8 @@ It is a voice based Personal Assistant for Windows. It can take commands through
 
 > **Sentry Mode** - In Sentry mode it can *detect motion* and if some motion is detected it will send email with photo to the owner  
 
+> **Wikipedia** - It can search through whole wikipedia.
+
 > **dictionary** - In-built offline dictionary  
 
 >**General Knowledge** - It can answer general knowledge questions of various fields  
