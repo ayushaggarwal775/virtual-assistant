@@ -14,6 +14,6 @@ It is a voice based Personal Assistant for Windows. It can take commands through
 
 >**Windows Navigation** - It can open almost all windows apps and services  
 
+>**Google Chrome** - It can operate google chrome. It can open and search in chrome browser as well as click links from obtained results.  
+
 >**Calculator** - It has a inbuilt scientific calculator  
-
-
