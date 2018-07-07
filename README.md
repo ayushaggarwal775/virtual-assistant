@@ -1,11 +1,12 @@
-# VirtulAssistant
-A Personal Assistant for Windows
+# VirtualAssistant
+
+It is a voice based Personal Assistant for Windows. It can take commands through user's voice and can give output through voice.  
 
 ## Features
 
 > **Weather forecasting** - It can tell about current weather or can forecast weather of any location in world    
 
-> **Sentry Mode** - In Sentry mode it can detect motion and if some motion is detected it will send email with photo to the owner  
+> **Sentry Mode** - In Sentry mode it can *detect motion* and if some motion is detected it will send email with photo to the owner  
 
 > **dictionary** - In-built offline dictionary  
 
