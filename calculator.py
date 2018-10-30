@@ -12,7 +12,7 @@ def opr(a,b,c):
     elif(c=='^'):
         return a**b
     else:
-        print("operator not defined")
+        print("invalid input,operator not defined")
 
 
 def sci(t):
