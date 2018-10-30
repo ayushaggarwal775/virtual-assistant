@@ -66,7 +66,7 @@ def check(t):
 #entry point
 def calculate(ar):
     print(''' \nenter expression
-for trignometric functition enter like sin45 etc\n''')
+for trignometric functition enter like cos45 etc\n''')
     ar = ar.split()
 
     for i in range(len(ar)):
