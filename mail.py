@@ -7,8 +7,8 @@ import xlrd
 
 
 def mail(name):
-
-    wb = xlrd.open_workbook('pass.xlsx')
+    passfile = "pass.xlsx"
+    wb = xlrd.open_workbook(passfile)
     ws1 = wb.sheet_by_index(0)
     password = int(ws1.cell_value(0,0))
 
