@@ -98,3 +98,5 @@ for trignometric functition enter like sin45 etc\n''')
     return result
     #print("\ndo you want to continue(y/n):")
     #condition = input()
+    
+print("inside calculator")
