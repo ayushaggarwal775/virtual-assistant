@@ -1,3 +1,26 @@
+
+# import urllib.request
+# import random
+# username = 'lum-customer-hl_944cc573-zone-zone1'
+# password = '8w6vwicom5cq'
+# port = 22225
+# session_id = random.random()
+# super_proxy_url = ('http://%s-country-in-city-delhi-session-%s:%s@zproxy.lum-superproxy.io:%d' %
+#     (username, session_id, password, port))
+# proxy_handler = urllib.request.ProxyHandler({
+#     'http': super_proxy_url,
+#     'https': super_proxy_url,
+# })
+# opener = urllib.request.build_opener(proxy_handler)
+# opener.addheaders = \
+# [('User-Agent', 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36')]
+# print('Performing request')
+# # 77.83.69.247
+# print(opener.open('https://ident.me/').read())
+# # print(super_proxy_url)
+
+
+
 from math import sin , cos , tan , log , pi,acos,asin,atan
 
 def opr(a,b,c):
@@ -99,4 +122,5 @@ for trignometric functition enter like sin45 etc\n''')
     #print("\ndo you want to continue(y/n):")
     #condition = input()
     
-print("inside calculator")
+if __name__ == "__main__":
+    print("inside calculator2")
